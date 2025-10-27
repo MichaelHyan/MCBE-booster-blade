@@ -1,0 +1,19 @@
+{
+"format_version":1,
+"header":{
+"description":"by Hyan",
+"name":"Booster Blade V2",
+"uuid":"87bb9ef2-073b-40b7-898b-e97269fe887e",
+"version":[2,0,0],
+"min_engine_version":[1,10,0]
+},
+"modules":[
+{
+"description":"脉冲喷流V2",
+"type":"data",
+"uuid":"d70c248a-7ac3-4c95-b43a-5894587e4402",
+"version":[2,0,0]
+}
+],
+"metadata": { "product_type": "addon" }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "items:gun"
+    },
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "items:gunu"
+      },
+      {
+        "item": "redstone_block"
+      }
+    ],
+    "result": {
+      "item": "items:gun",
+      "count": 1
+    }
+  }
+}

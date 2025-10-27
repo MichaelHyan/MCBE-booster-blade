@@ -1,0 +1,9 @@
+{
+  "charge": {
+    "category": "hostile",
+    "min_distance": 10.0,
+    "sounds": [
+      "sounds/charge"
+    ]
+  }
+}

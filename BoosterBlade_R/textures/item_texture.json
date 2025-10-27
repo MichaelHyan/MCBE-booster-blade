@@ -1,0 +1,30 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+	  "blade": {
+      "textures": "blade.png"
+    },
+    "gun": {
+      "textures": "gun.png"
+    },
+    "gunu": {
+      "textures": "gunu.png"
+    },
+    "ta": {
+      "textures": "ta.png"
+    },
+    "tb": {
+      "textures": "tb.png"
+    },
+    "tc": {
+      "textures": "tc.png"
+    },
+    "td": {
+      "textures": "td.png"
+    },
+    "te": {
+      "textures": "gun.png"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "items:gunu",
+      "category": "Nature"
+    },
+
+    "components": {
+      "minecraft:icon": "gunu",
+      "minecraft:render_offsets": "gunu"
+    }
+  }
+}

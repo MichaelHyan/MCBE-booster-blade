@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "items:gunu"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "a  ",
+      "aca",
+      "aab"
+    ],
+    "key": {
+      "a": {
+        "item": "iron_ingot"
+      },
+      "b": {
+        "item": "gunpowder"
+      },
+      "c": {
+        "item": "redstone"
+      }
+    },
+    "result": {
+      "item": "items:gunu",
+      "count": 1
+    }
+  }
+}

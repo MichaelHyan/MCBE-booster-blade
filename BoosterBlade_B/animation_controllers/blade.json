@@ -1,0 +1,214 @@
+{
+	"format_version": "1.8.0",
+	"animation_controllers": {
+		"controller.animation.blade":{
+			"states":{
+				"base_jeta":{
+					"transitions":[
+						{"blade_a":"query.get_equipped_item_name=='blade' && query.is_using_item && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') < 9"},
+						{"blade_e":"query.get_equipped_item_name=='blade' && query.is_using_item && !variable.attack_time && !query.is_sneaking && query.scoreboard('charge') == 9"},
+						{"blade_b":"query.get_equipped_item_name=='blade' && !query.is_using_item && variable.attack_time && query.scoreboard('charge') < 10"},
+						{"blade_c":"query.get_equipped_item_name=='blade' && !query.is_using_item && variable.attack_time && query.scoreboard('charge') == 10"},
+						{"blade_d":"query.get_equipped_item_name=='blade' && query.is_using_item && !variable.attack_time && query.is_sneaking"},
+						{"gun_a":"!variable.attack_time && query.get_equipped_item_name=='gun'"},
+						{"gun_b":"variable.attack_time && query.get_equipped_item_name=='gun'"},
+						{"taa":"query.get_equipped_item_name=='ta' && query.scoreboard('tran') == 1"},
+						{"tab":"query.get_equipped_item_name=='ta' && query.scoreboard('tran') == 0"},
+						{"tba":"query.get_equipped_item_name=='tb' && query.scoreboard('tran') == 1"},
+						{"tbb":"query.get_equipped_item_name=='tb' && query.scoreboard('tran') == 0"},
+						{"tca":"query.get_equipped_item_name=='tc' && query.scoreboard('tran') == 1"},
+						{"tcb":"query.get_equipped_item_name=='tc' && query.scoreboard('tran') == 0"},
+						{"tda":"query.get_equipped_item_name=='td' && query.scoreboard('tran') == 1"},
+						{"tdb":"query.get_equipped_item_name=='td' && query.scoreboard('tran') == 0"},
+						{"tea":"query.get_equipped_item_name=='te' && query.scoreboard('tran') == 1"},
+						{"teb":"query.get_equipped_item_name=='te' && query.scoreboard('tran') == 0"}
+					]
+				},
+				"blade_a": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/particle minecraft:totem_particle ~ ~1 ~"
+
+					]
+				},
+				"blade_e": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/scoreboard players add @s charge 1",
+						"/particle minecraft:totem_particle ~ ~1 ~",
+						"/playsound charge @a[r=5]",
+						"/title @s actionbar 充能完成"
+					]
+				},
+				"blade_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/effect @s strength 1 5 true",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"blade_c": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/summon wind_charge_projectile",
+						"/damage @e[type=!player,type=!item,r=5] 50",
+						"/particle minecraft:critical_hit_emitter ^ ^2.8 ^2.5",
+						"/effect @s strength 1 5 true",
+						"/scoreboard players set @s charge 0"
+					]
+				},
+				"blade_d": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s tran 0",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:ta"
+					]
+				},
+				"gun_a": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:gun 3",
+						"/scoreboard objectives add charge dummy",
+						"/scoreboard objectives add tran dummy"
+					]
+				},
+				"gun_b": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+					    "/scoreboard players set @s tran 1",
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:te"
+					]
+				},
+				"taa": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:blade"
+					]
+				},
+				"tab": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:tb"
+					]
+				},
+				"tba": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:ta"
+					]
+				},
+				"tbb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:tc"
+					]
+				},
+				"tca": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:tb"
+					]
+				},
+				"tcb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:td"
+					]
+				},
+				"tda": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:tc"
+					]
+				},
+				"tdb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:te"
+					]
+				},
+				"tea": {
+					"transitions": [
+						{
+							"base_jeta": "(1.0)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:td"
+					]
+				},
+				"teb": {
+					"transitions": [
+							{
+								"base_jeta": "(1.0)"
+							}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 items:gun 3"
+					]
+				}
+			}
+		}
+ 	}
+ }
