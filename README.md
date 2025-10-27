@@ -1,4 +1,4 @@
-#### 原创模组 脉冲喷流
+## 原创模组 脉冲喷流
 
 下载BoosterBladeV2.mcaddon使用
 
@@ -6,7 +6,9 @@
 
 增加一种变形武器，可自由切换
 
-## 剑形态：脉冲
+#### 剑形态：脉冲
+
+![](https://github.com/MichaelHyan/MCBE-booster-blade/blob/main/BoosterBlade_R/blade.png)
 
 使用剑形态时攻击自动触发增伤效果
 
@@ -14,7 +16,9 @@
 
 下蹲右键切换为枪形态
 
-## 枪形态：喷流
+#### 枪形态：喷流
+
+![](https://github.com/MichaelHyan/MCBE-booster-blade/blob/main/BoosterBlade_R/gun.png)
 
 使用魔改版雪球代码
 
@@ -23,6 +27,7 @@
 ### 获取方式
 
 使用5个铁锭，一个火药和一个红石合成未充能发射器
+![](https://github.com/MichaelHyan/MCBE-booster-blade/blob/main/BoosterBlade_R/gunu.png)
 
 未充能发射器可从奖励箱获得
 
